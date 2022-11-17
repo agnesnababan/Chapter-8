@@ -7,9 +7,10 @@
     "start": "node -r dotenv/config bin/www",
     "develop": "nodemon -r dotenv/config bin/www",
     "db:create": "cross-env NODE_ENV=test npx sequelize db:create",
-    "db:drop": "sequelize db:drop",
+    "db:drop": "cross-env NODE_ENV=test npx sequelize db:drop",
     "db:migrate": "cross-env NODE_ENV=test npx sequelize db:migrate",
     "db:seed": "cross-env NODE_ENV=test npx sequelize db:seed:all",
+    "db:seed:undo": "cross-env NODE_ENV=test npx sequelize db:seed:undo",
     "test": "jest --setupFiles dotenv/config --coverage --forceExit"
   },
   "dependencies": {

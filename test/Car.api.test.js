@@ -72,7 +72,7 @@ describe("GET /cars", () => {
         rentStartedAt: "2022-11-15T11:44:02.329Z",
         rentEndedAt: "2022-11-15T11:44:02.329Z"
       };
-      const response = await request(app).post("/v1/cars/45/rent").set("Authorization", `Bearer ${token}`).send(rentTime);
+      const response = await request(app).post("/v1/cars/20/rent").set("Authorization", `Bearer ${token}`).send(rentTime);
       expect(response.statusCode).toBe(201);
     });
   
@@ -81,7 +81,7 @@ describe("GET /cars", () => {
         rentStartedAt: "2022-11-15T11:44:02.329Z",
         rentEndedAt: "2022-11-15T11:44:02.329Z"
       };
-      const response = await request(app).post("/v1/cars/45/rent").send(rentTime);
+      const response = await request(app).post("/v1/cars/40/rent").send(rentTime);
       expect(response.statusCode).toBe(401);
     });
   
