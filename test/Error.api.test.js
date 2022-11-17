@@ -1,12 +1,9 @@
-const request = require("supertest");
-const app = require("../app");
-const dotenv = require("dotenv");
-const {
-  EmailNotRegisteredError,
-  EmailAlreadyTakenError,
-  InsufficientAccessError
-} = require("../app/errors");
-dotenv.config();
+/* eslint-disable no-undef */
+import request from "supertest";
+import app from "../app";
+import { config } from "dotenv";
+import { EmailNotRegisteredError, InsufficientAccessError } from "../app/errors";
+config();
 
 describe("API error: email is not registered", () => {
   const emailError = new EmailNotRegisteredError('lalamupon@gmail.com');

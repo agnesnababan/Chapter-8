@@ -1,7 +1,8 @@
-const request = require("supertest")
-const app = require("../app/index")
-const dotenv = require("dotenv")
-dotenv.config();
+/* eslint-disable no-undef */
+import request from "supertest";
+import app from "../app/index";
+import { config } from "dotenv";
+config();
 
 // describe("Dog", () => {
 //     it("should have name called 'Arnold'", () => {

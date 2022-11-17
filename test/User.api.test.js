@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-const request = require("supertest");
-const app = require("../app");
-const dotenv = require("dotenv");
-dotenv.config();
+import request from "supertest";
+import app from "../app";
+import { config } from "dotenv";
+config();
 
 describe("API Login", () => {
   it("success login", async () => {
