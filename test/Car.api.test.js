@@ -1,4 +1,4 @@
-const { request } = require("supertest")
+const request = require("supertest")
 const app = require("../app/index")
 const dotenv = require("dotenv")
 dotenv.config();
@@ -32,9 +32,9 @@ describe("GET /cars", () => {
       });
     });
   
-    describe("success get data car by ID 20", () => {
+    describe("success get data car by ID 10", () => {
       it("should response with a 200 status code", async () => {
-        const response = await request(app).get("/v1/cars/20");
+        const response = await request(app).get("/v1/cars/10");
         expect(response.statusCode).toBe(200);
       });
     });

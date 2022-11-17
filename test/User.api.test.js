@@ -1,3 +1,8 @@
+const request = require("supertest")
+const app = require("../app/index")
+const dotenv = require("dotenv")
+dotenv.config();
+
 describe("API Login", () => {
     it("success login", async () => {
       const user = {
@@ -30,8 +35,8 @@ describe("API Login", () => {
   describe("API Register", () => {
     it("success register", async () => {
       const user = {
-        name: "Lala Mufi",
-        email: "lalamupon@gmail.com",
+        name: "Dilan Cemek",
+        email: "dilancemek@gmail.com",
         password: "123456"
       };
   
@@ -41,7 +46,7 @@ describe("API Login", () => {
   
     it("failed login: email is already taken", async () => {
       const failedUserRegist = {
-        name: "Lala Mufi",
+        name: "Lala Muti",
         email: "fikri@binar.co.id",
         password: "123456",
       };
