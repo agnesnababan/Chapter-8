@@ -1,3 +1,4 @@
+require('dotenv').config();
 const {
   DB_USER = "",
   DB_PASSWORD = "",
@@ -24,11 +25,11 @@ module.exports = {
     dialect: "postgres"
   },
   production: {
-    username: DB_USER,
-    password: DB_PASSWORD,
-    database: `${DB_NAME}_production`,
-    host: DB_HOST,
-    port: DB_PORT,
+    username: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
+    host: process.env.PGHOST,
+    port: process.env.PGPORT,
     dialect: "postgres"
   }
 }
