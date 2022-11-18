@@ -12,7 +12,8 @@
     "db:seed": "cross-env NODE_ENV=test npx sequelize db:seed:all",
     "db:seed:undo": "cross-env NODE_ENV=test npx sequelize db:seed:undo",
     "eslint":"eslint app.js",
-    "test": "jest --setupFiles dotenv/config --coverage --forceExit"
+    "test": "jest --setupFiles dotenv/config --coverage --forceExit",
+    "deployment": "npx sequelize db:create && npx sequelize db:migrate && npm run start"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
