@@ -7,7 +7,8 @@ Tugas kalian disini adalah:
 3. Coverage minimal 70%
 
 ## Deployement
-agnes-challenge-chapter-8-production.up.railway.app
+
+
 ## Hasil Test
 
                                                                        
@@ -42,6 +43,9 @@ All files                     |   87.62 |    80.88 |   87.23 |   87.62 |
 ------------------------------|---------|----------|---------|---------|-------------------------------------
 
 Test Suites: 3 passed, 3 total
+
 Tests:       20 passed, 20 total
+
 Snapshots:   0 total
+
 Time:        9.286 s
